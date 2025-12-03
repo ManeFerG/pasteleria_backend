@@ -15,7 +15,10 @@ object Database {
         val user = System.getenv("MYSQLUSER") ?: "root"
         val pass = System.getenv("MYSQLPASSWORD") ?: ""
 
-        jdbcUrl = "jdbc:mysql://$host:$port/$db?useSSL=false&serverTimezone=UTC"
+        jdbcUrl = "jdbc:mysql://$host:$port/$db" +
+                "?useSSL=false" +
+                "&allowPublicKeyRetrieval=true" +
+                "&serverTimezone=UTC"
         username = user
         password = pass
         maximumPoolSize = 5
