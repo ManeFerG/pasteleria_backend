@@ -9,7 +9,7 @@ object Database {
     private val config = HikariConfig().apply {
         jdbcUrl = "jdbc:mysql://localhost:3306/pasteleria_db"
         username = "root"
-        password = "1234"
+        password = ""
         maximumPoolSize = 5
     }
     private val ds = HikariDataSource(config)
